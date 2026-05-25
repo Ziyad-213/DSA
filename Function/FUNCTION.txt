@@ -1,0 +1,102 @@
+ Function (Method) in Java
+ What is a Function?
+
+A function (method) is a block of code that:
+
+performs a specific task
+can be reused multiple times
+may take input and return output
+
+ In Java, functions are called methods
+
+ Syntax
+returnType methodName(parameters) {
+    // code
+}
+Example:
+int add(int a, int b) {
+    return a + b;
+}
+
+Why we use Functions
+Avoid repetition (DRY principle)
+Make code clean and readable
+Easy to debug and maintain
+Reuse logic multiple times
+
+ Features of Functions
+1. Reusability
+
+Write once, use many times
+
+2. Modularity
+
+Break big problem → smaller parts
+
+3. Readability
+
+Code becomes easier to understand
+
+4. Maintainability
+
+Fix/change code in one place
+
+5. Abstraction
+
+User doesn’t need to know internal logic
+
+6. Reduces Code Duplication
+
+No need to rewrite same logic
+
+ Types of Functions in Java
+1. Based on Return Type
+ (A) Function with return value
+int add(int a, int b) {
+    return a + b;
+}
+
+ Gives output back
+
+ (B) Void function (no return)
+void printHello() {
+    System.out.println("Hello");
+}
+
+Only performs action, no return
+
+2. Based on Parameters
+ (A) No parameters
+void greet() {
+    System.out.println("Hi");
+}
+ (B) With parameters
+void greet(String name) {
+    System.out.println("Hi " + name);
+}
+3. Four Common Combinations (Important)
+Type	Description
+No parameter, no return	void fun()
+No parameter, return	int fun()
+Parameter, no return	void fun(int a)
+Parameter, return	int fun(int a)
+4. Built-in vs User-defined
+ Built-in functions
+
+Already provided by Java
+
+Math.sqrt(25);
+ User-defined functions
+
+Created by programmer
+
+int square(int x) {
+    return x * x;
+}
+
+**Call by Value and Call by Reference**
+
+Call by Value (Primitives): When you pass a primitive, Java creates a separate memory location on the stack for the method's parameter. If you change this parameter inside the method, the original variable in the calling code remains untouched.
+
+Call by Value (Object References): When you pass an object, you are actually passing a copy of the address where that object lives in memory. Because both the caller and the method now have copies of the same address, they both point to the same object in the heap.
+
